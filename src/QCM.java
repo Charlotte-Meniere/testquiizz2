@@ -4,12 +4,12 @@ public class QCM {
     QCM(){
     }
 
-    public void poser_question_facile_QCM(){
+    public void poser_question_QCM(){
 
         System.out.println("La terre est la planete numero ?");
         System.out.println("1, 2, 3 ou 4 ?");
 
-        String good_answerQCMeasy = "3";
+        String good_answerQCM = "3";
         Scanner sc = new Scanner(System.in);
         String user_answerQCMeasy = sc.nextLine();
         if ("1".equals(user_answerQCMeasy)) {
@@ -33,13 +33,13 @@ public class QCM {
         System.out.println("Quel train prend Harry pour aller à Poudlard ?");
         System.out.println("1-la Batmobile, 2-Le poudlard express, 3-Titou ou 4-La ligne b entre Peixotto et st Nicolas ?");
 
-        String good_answerQCMinter = "2";
+        String good_answerQCM = "2";
         Scanner sc = new Scanner(System.in);
         String user_answerQCMinter = sc.nextLine();
         if ("1".equals(user_answerQCMinter)) {
             System.out.println("tu me déçois");
         }
-        else if ("2".equals(user_answerQCMinter)) {
+        else if ("2".equals(user_answerQCM)) {
             System.out.println("Bravo tu est un vrai potterhead");
         }
         else if ("3".equals(user_answerQCMinter)) {
