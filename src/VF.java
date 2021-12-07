@@ -1,34 +1,34 @@
 import java.util.Scanner;
 
 public class VF {
+
+    // reste vide car on le définit dans le constructeur
+    private String question_VF ="";
+    private String answer_VF = "";
+
     VF(){
     }
 
-    VF(String text_question){
-        question = text_question;
+    VF(String text_question, String good_answer){
+        question_VF = text_question;
+        answer_VF = good_answer;
     }
 
-    VF(String text_question, String bonneReponse){
-        question = text_question;
-    }
+    //question de niveau facile
 
-    private String question ="Le soleil est jaune Vrai(v) ou Faux(f) ?";
-
-    public void poser_question(){
-        System.out.println(question);
+    public void poser_question_VF(){
+        System.out.println(question_VF);
         Scanner sc = new Scanner(System.in);
         // saut de ligne
 
-        String good_answer = "v";
         String user_answer = sc.nextLine();
-        if (good_answer.equals(user_answer)) {
-            System.out.println("it's true");
-        }
-        else if ("f".equals(user_answer)) {
-            System.out.println("it's false, the sun is yellow");
+
+        if (answer_VF.equals(user_answer)) {
+            System.out.println("c'est vrai");
         }
         else {
-            System.out.println("this response have to be a v or a f");
+            System.out.println("c'est faux");
         }
     }
+
 }
