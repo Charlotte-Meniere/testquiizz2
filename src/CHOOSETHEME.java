@@ -23,7 +23,7 @@ public class CHOOSETHEME {
             System.out.println("ok voila Harry potter");
 
             // bon voila cette partie je suis pas sûre
-            System.out.println(ThemeHP);
+            //System.out.println(ThemeHP);
 
         }
 
