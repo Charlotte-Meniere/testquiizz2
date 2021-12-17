@@ -1,80 +1,38 @@
 import java.util.Scanner;
 
 public class QCM {
-    QCM(){
+    // reste vide car on le définit dans le constructeur
+    private String question_QCM ="";
+    private String answer_QCM = "";
+
+    // definit les reponses acceptées a uniquement 1,2,3
+    // elles sont finals car ce sont de constante ( leur valeur est inchangeable)
+    private final String one = "1";
+    private final String two = "2";
+    private final String three = "3";
+
+
+    QCM(String text_question, String good_answer){
+        question_QCM = text_question;
+        answer_QCM = good_answer;
     }
 
     public void poser_question_QCM(){
-
-        System.out.println("La terre est la planete numero ?");
-        System.out.println("1, 2, 3 ou 4 ?");
-
-        String good_answerQCM = "3";
+        System.out.println(question_QCM);
         Scanner sc = new Scanner(System.in);
-        String user_answerQCMeasy = sc.nextLine();
-        if ("1".equals(user_answerQCMeasy)) {
-            System.out.println("the earth is the 3rd planet");
+        // saut de ligne
+
+        String user_answer = sc.nextLine();
+        if(!one.equals(user_answer)&&!two.equals(user_answer)&&!three.equals(user_answer)){
+            // si c'est ni un v ou un f on va pas plus loin dans le programme
+            System.out.println("réponse invalide");
         }
-        else if ("2".equals(user_answerQCMeasy)) {
-            System.out.println("the earth is the 3rd planet");
-        }
-        else if ("3".equals(user_answerQCMeasy)) {
-            System.out.println("it's true, the earth is the 3rd planet");
-        }
-        else if ("4".equals(user_answerQCMeasy)) {
-            System.out.println("the earth is the 3rd planet");
+
+        // si c'est bien 1, 2 ou 3, verifie si la reponse est bien celle qu'on a définit dans good_answer
+        else if (answer_QCM.equals(user_answer)) {
+            System.out.println("c'est vrai");
         }
         else {
-            System.out.println("this response have to be 1, 2, 3 or 4");
+            System.out.println("c'est faux");
         }
-}
-    public void poser_question_inter_QCM(){
-
-        System.out.println("Quel train prend Harry pour aller à Poudlard ?");
-        System.out.println("1-la Batmobile, 2-Le poudlard express, 3-Titou ou 4-La ligne b entre Peixotto et st Nicolas ?");
-
-        String good_answerQCM = "2";
-        Scanner sc = new Scanner(System.in);
-        String user_answerQCMinter = sc.nextLine();
-        if ("1".equals(user_answerQCMinter)) {
-            System.out.println("tu me déçois");
-        }
-        else if ("2".equals(user_answerQCM)) {
-            System.out.println("Bravo tu est un vrai potterhead");
-        }
-        else if ("3".equals(user_answerQCMinter)) {
-            System.out.println("tu me déçois");
-        }
-        else if ("4".equals(user_answerQCMinter)) {
-            System.out.println("tu me déçois");
-        }
-        else {
-            System.out.println("this response have to be 1, 2, 3 or 4");
-        }
-    }
-    public void poser_question_diff_QCM(){
-
-        System.out.println("Quel train prend Harry pour aller à Poudlard ?");
-        System.out.println("1-la Batmobile, 2-Le poudlard express, 3-Titou ou 4-La ligne b entre Peixotto et st Nicolas ?");
-
-        String good_answerQCMdiff = "2";
-        Scanner sc = new Scanner(System.in);
-        String user_answerQCMdiff = sc.nextLine();
-        if ("1".equals(user_answerQCMdiff)) {
-            System.out.println("tu me déçois");
-        }
-        else if ("2".equals(user_answerQCMdiff)) {
-            System.out.println("Bravo tu est un vrai potterhead");
-        }
-        else if ("3".equals(user_answerQCMdiff)) {
-            System.out.println("tu me déçois");
-        }
-        else if ("4".equals(user_answerQCMdiff)) {
-            System.out.println("tu me déçois");
-        }
-        else {
-            System.out.println("this response have to be 1, 2, 3 or 4");
-        }
-    }
-
-}
+}}

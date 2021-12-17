@@ -11,8 +11,7 @@ public class VF {
     private final String vrai = "v";
     private final String faux = "f";
 
-    VF(){
-    }
+
 
     VF(String text_question, String good_answer){
         question_VF = text_question;
