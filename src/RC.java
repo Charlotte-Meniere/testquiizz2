@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class RC {
+public class RC implements Question {
     // reste vide car on le définit dans le constructeur
     private String question_RC ="";
     private String answer_RC = "";
@@ -30,5 +30,10 @@ public class RC {
         else {
             System.out.println("c'est faux");
         }
+    }
+
+    @Override
+    public void poserQuestion() {
+        poser_question_RC();
     }
 }

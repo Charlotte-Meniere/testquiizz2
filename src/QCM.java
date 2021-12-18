@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class QCM {
+public class QCM implements Question {
     // reste vide car on le définit dans le constructeur
     private String question_QCM ="";
     private String answer_QCM = "";
@@ -35,4 +35,11 @@ public class QCM {
         else {
             System.out.println("c'est faux");
         }
-}}
+}
+
+    @Override
+    public void poserQuestion() {
+        //pôur cette class poser question c'est poser une question sous la forme de QCM
+        poser_question_QCM();
+    }
+}

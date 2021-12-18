@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class VF {
+public class VF implements Question {
 
     // reste vide car on le définit dans le constructeur
     private String question_VF ="";
@@ -39,4 +39,8 @@ public class VF {
         }
     }
 
+    @Override
+    public void poserQuestion() {
+        poser_question_VF();
+    }
 }
