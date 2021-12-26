@@ -13,6 +13,7 @@ public class RC implements Question {
     }
 
     public void poser_question_RC(){
+        System.out.println("Partie RC, veillez a bien tout écrire en minuscule");
         System.out.println(question_RC);
         Scanner sc = new Scanner(System.in);
         // saut de ligne

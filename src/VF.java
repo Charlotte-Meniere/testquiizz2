@@ -21,6 +21,7 @@ public class VF implements Question {
     //question de niveau facile
 
     public void poser_question_VF(){
+        System.out.println("Partie vrai ou faux");
         System.out.println(question_VF);
         Scanner sc = new Scanner(System.in);
         // saut de ligne

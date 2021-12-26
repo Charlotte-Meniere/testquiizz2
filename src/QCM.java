@@ -13,11 +13,13 @@ public class QCM implements Question {
 
 
     QCM(String text_question, String good_answer){
+
         question_QCM = text_question;
         answer_QCM = good_answer;
     }
 
     public void poser_question_QCM(){
+        System.out.println("Partie QCM");
         System.out.println(question_QCM);
         Scanner sc = new Scanner(System.in);
         // saut de ligne
