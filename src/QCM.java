@@ -26,7 +26,7 @@ public class QCM implements Question {
 
         String user_answer = sc.nextLine();
         if(!one.equals(user_answer)&&!two.equals(user_answer)&&!three.equals(user_answer)){
-            // si c'est ni un v ou un f on va pas plus loin dans le programme
+            // si c'est ni un 1, 2 ou un 3 on va pas plus loin dans le programme
             System.out.println("réponse invalide");
         }
 
